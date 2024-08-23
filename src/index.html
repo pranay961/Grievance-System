@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grievance System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Grievance System</h1>
+
+        <section id="submit-grievance">
+            <h2>Submit Grievance</h2>
+            <form id="grievance-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="type">Grievance Type:</label>
+                <select id="type" required>
+                    <option value="Academic">Academic</option>
+                    <option value="Administrative">Administrative</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="description">Description:</label>
+                <textarea id="description" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="view-grievance">
+            <h2>View Grievance</h2>
+            <input type="text" id="search" placeholder="Search by Grievance ID or Email">
+            <div id="grievance-list"></div>
+        </section>
+
+        <section id="admin-panel">
+            <h2>Admin Panel</h2>
+            <button id="admin-login-btn">Login as Admin</button>
+            <div id="admin-dashboard" style="display:none;">
+                <h3>Grievance Dashboard</h3>
+                <div id="admin-grievance-list"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
